@@ -65,7 +65,7 @@ def if_win(state):
 
 def if_lose(state):
 
-    if state["user_guess"] > state["max_guess"]:
+    if state["user_guess"] == state["max_guess"]:
         print("you lose")
         exit("goodbye")
 

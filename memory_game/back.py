@@ -18,12 +18,24 @@ def creat_table_card(size):
 
     return mixing(matrix)
 
-def check_2(num):
+def check_2():
+    while True:
+        try:
+            size = int(input("enter size table"))
+            if size % 2 == 0:
+                return size
+        except:
+            pass
+        print("please enter only even number")
 
-        if num % 2 == 0:
-            return True
-        else:
-            return False
+def check_if_number():
+
+    while True:
+        try:
+            num = int(input("enter how meny guess you have"))
+            return num
+        except:
+            print("please enter only nuber")
 
 def creat_table(size):
     matrix_card = []
