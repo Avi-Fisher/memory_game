@@ -1,9 +1,9 @@
 import random
-from random import randint
+
 
 def creat_table_card(size):
     matrix = []
-    count = 0
+    count = 1
 
     for i in range(size):
         row = []
@@ -16,7 +16,7 @@ def creat_table_card(size):
 
         matrix.append(row)
 
-    return matrix
+    return mixing(matrix)
 
 def check_2(num):
 
