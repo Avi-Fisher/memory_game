@@ -1,17 +1,16 @@
 from memory_game import game
+from memory_game.back import check_2, check_if_number
 from memory_game.game import check_search, guess, corect_guess, check_guess
 from memory_game.io import print_status
 
 
 def play():
-
     print("welcome to memory game")
-    size = int(input("enter size table"))
-    max_guess = int(input("enter how meny guess you have"))
-
+    size = check_2()
+    max_guess = check_if_number()
 
     state = game.game1(size,max_guess)
-    print(state)
+
     while True:
         guess(state)
         print_status(state)
