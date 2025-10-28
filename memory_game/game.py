@@ -1,9 +1,13 @@
-from xmlrpc.client import Boolean
+from memory_game.back import creat_table_card, creat_table
 
 
-def game(size):
+def game(size,max_guess):
 
-    state = {}
+    state = {"table_card":creat_table_card(size),
+             "user_table":creat_table(size),
+             "user_card":[],
+             "max_guess":max_guess}
+
 
     return state
 
