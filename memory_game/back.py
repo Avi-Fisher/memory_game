@@ -37,6 +37,15 @@ def check_if_number():
         except:
             print("please enter only nuber")
 
+def check_if_guess_number(state,num):
+
+    if type(num) == int:
+        return True
+    if num < 1 or num > state["size"]:
+        return True
+    return False
+
+
 def creat_table(size):
     matrix_card = []
 
