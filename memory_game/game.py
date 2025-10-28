@@ -11,15 +11,16 @@ def game(size,max_guess):
 
     return state
 
-def check_search(num1,num2):
-
-    bool =  True or False
-    return bool
+def check_search(state,num1,num2):
+    if state["size"] >= num1 and state["size"] >= num2:
+        if 0 <= num1 and 0 <= num2:
+            return True
+    return False
 
 def check_in_table(state,num1,num2):
 
-    bool = True or False
-    return bool
+    if state["table_card"][num1][num2] != "*":
+        return True
 
 def corect_guess(state,card):
 
